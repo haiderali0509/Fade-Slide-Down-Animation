@@ -29,6 +29,8 @@ header::before{
   bottom: 0;
   left: 0;
   z-index: -1;
+  opacity: 0;
+  animation: fade-slide-down 2s 0.5s cubic-bezier(0,0.5,0,1) forwards;
 }
 header:after {
   background: #F9FCFF;
@@ -59,4 +61,14 @@ header:after {
           transform: translateZ(.1px);
   z-index: 10;
 }
-
+/* Animation */
+@keyframes fade-slide-down {
+  0%{
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+  100%{
+    opacity: 1;
+    transform: none;
+  }
+}
